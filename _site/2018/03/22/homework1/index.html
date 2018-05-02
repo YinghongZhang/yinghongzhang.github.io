@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="King of the world">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/icon.jpg">
+
+    <title>系分 Homework 1 - Live Once</title>
+
+    <link rel="canonical" href="http://localhost:8080/2018/03/22/homework1/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Live Once</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/">Tags</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/post-bg-2015.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/post-bg-2015.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#系分作业" title="系分作业">系分作业</a>
+                        
+                    </div>
+                    <h1>系分 Homework 1</h1>
+                    
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by ONE on March 22, 2018</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+				<table>
+  <thead>
+    <tr>
+      <th>学号</th>
+      <th>15331407</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>姓名</td>
+      <td>张应鸿</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="简单题">简单题</h2>
+
+<h3 id="软件工程">软件工程</h3>
+
+<p>将系统化的、规范的、可度量的方法用于软件的开发、运行和维护的过程，即将工程化应用于软件开发中。</p>
+
+<p>是指导计算机软件开发和维护的工程学科。 采用工程的概念、原理、技术和方法来开发与维护软件， 把经过实践考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来，这就是软件工程。</p>
+
+<hr />
+
+<h3 id="阅读经典名著人月神话等资料解释-software-crisiscocomo-模型">阅读经典名著“人月神话”等资料，解释 software crisis、COCOMO 模型。</h3>
+
+<h4 id="软件危机">软件危机</h4>
+
+<p>是指在软件开发及维护的过程中所遇到的一系列严重问题，这些问题皆可能导致软件产品的寿命缩短、甚至夭折。上世纪60年代以来，随着计算机应用需求的驱动，系统软件和应用软件有很大的发展，软件生产的复杂性和高成本，使得大型软件的生产出现很大困难，由此引申出软件危机。</p>
+
+<p>软件开发是一项高难度、高风险的活动，由于它的高失败率，故有所谓“软件危机”之说。软件危机的本源是复杂、期望和改变。这个术语用来描述正急遽增加之电脑的力量带来的冲击和可能要处理的问题的复杂性。从本质上来说，它谈到了写出正确、可理解、可验证的计算机程序的困难。</p>
+
+<hr />
+
+<h4 id="cocomo模型">COCOMO模型</h4>
+
+<p>Constructive Cost Model 最初发表于1981年巴里《软件工程经济学》一书中，做为一种在软件项中估算工作量、成本以及时间表的模型。该模型由三个不断深入和详细的层次组成。</p>
+
+<ul>
+  <li>第一层，基本COCOMO，适用对软件开发进行快速、早期地对重要的方面进行粗略的成本估计，但因其缺少不同的项目属性（“成本驱动者”）的因素，所以准确性有一定的局限性。</li>
+  <li>第二层，中级COCOMO，考虑进了这些成本驱动者</li>
+  <li>第三层，详细COCOMO，加入了对不同软件开发阶段影响的考量</li>
+</ul>
+
+<hr />
+
+<h3 id="软件生命周期">软件生命周期</h3>
+
+<p>软件生命周期指软件的产生直到成熟的全部过程。</p>
+
+<p>在早期，生命周期内有问题定义、可行性分析、总体描述、系统设计、编码、调试和测试、验收与运行、维护升级到废弃等阶段，这种按时间分程的思想方法是软件工程中的一种思想原则，即按部就班、逐步推进，每个阶段都要有定义、工作、审查、形成文档以供交流或备查，以提高软件的质量。这是受到了瀑布模型的影响。随着面向对象技术的成熟和其他生命周期模型的出现，这些生命周期设计方法的指导意义逐步减少。软件生命周期人们为开发更好的软件而归纳总结的软件生命周期的典型实践参考。在现代软件领域，软件生产有较大的复杂性和更高的要求，因而没有一定固定的、通用的设计方法，大多数情况下，是依据软件的各类要求，选择合适的软件生命周期设计方法进行开发。</p>
+
+<hr />
+
+<h3 id="按照-swebok-的-ka-划分本课程关注哪些-ka-或-知识领域">按照 SWEBok 的 KA 划分，本课程关注哪些 KA 或 知识领域？</h3>
+
+<ul>
+  <li>Software requirements  软件需求</li>
+  <li>Software design  软件设计</li>
+  <li>Software construction  软件构造</li>
+  <li>Software testing  软件测试</li>
+  <li>Software maintenance  软件维护</li>
+  <li>Software configuration management  软件配置管理</li>
+  <li>Software engineering management  软件工程管理</li>
+  <li>Software engineering process  软件工程过程</li>
+  <li>Software engineering models and methods  软件工程工具和方法</li>
+  <li>Software quality  软件质量</li>
+  <li>Software engineering professional practice  软件工程专业实践</li>
+  <li>Software engineering economics  软件工程经济</li>
+  <li>Computing foundations  计算机基础</li>
+  <li>Mathematical foundations  数学基础</li>
+  <li>Engineering foundations  工程基础</li>
+</ul>
+
+<hr />
+
+<h3 id="解释-cmmi-的五个级别例如level-1---initial无序自发生产模式">解释 CMMI 的五个级别。例如：Level 1 - Initial：无序，自发生产模式。</h3>
+
+<h4 id="level-1---initial-初始级">Level 1 - Initial 初始级</h4>
+
+<p>无序，无法预测，有时候甚至是混乱的。项目可能会成功，任务完成中存在很大的偶然性，不能担保按时按期完成任务。研发员是者一个级别最关键的因素。</p>
+
+<h4 id="level2---managed-可管理级">Level2 - Managed 可管理级</h4>
+
+<p>具备有对项目的管理能力。能够建立比较基础的项目管理规范，对于项目的实施能够列出相应的计划和流程，并且随着流程的进行可以对此实施监控和控制。</p>
+
+<h4 id="level3---defined-已定义级">Level3 - Defined 已定义级</h4>
+
+<p>已将软件管理和工程两方面的过程文档化、标准化，并综合成该组织的标准软件过程。所有项目均使用经批准、剪裁的标准软件工程来开发和维护软件，软件产品的生产在整个软件过程是可见的。</p>
+
+<h4 id="level-4---quantitatively-managed-量化管理级">Level 4 - Quantitatively Managed 量化管理级</h4>
+
+<p>数据驱动。分析对软件过程和产品质量的详细度量数据，对软件过程和产品都有定量的理解与控制（管理量化）。能够在定量的范围内预测性能。项目的质量因此保证相对的高质量和稳定。</p>
+
+<h4 id="level-5---optimizing-优化管理级">Level 5 - Optimizing 优化管理级</h4>
+
+<p>过程的量化反馈和先进的新思想、新技术促使过程持续不断改进。</p>
+
+<hr />
+
+<h3 id="用自己语言简述-swebok-或-cmmi">用自己语言简述 SWEBok 或 CMMI</h3>
+
+<p>CMMI是能力成熟度模型集成。CMMI是美国国防部、卡内基梅隆大学、美国国防工业协会共同开发和研制的，它集成了现存的有助于提高企业管理能力和软件质量的实践。25年来，经过政府和组织的不断实践和完善，CMMI模型卓有成效。</p>
+
+<p>CMMI目的是帮助那些追求高质量、管理能力的企业对软件工程过程进行管理和改进，增强开发、改进、质量监管和盈利能力，使其能够按计划地开发出高质量地软件。</p>
+
+<p>CMMI包含5个等级，初始级、可管理级、已定义级、量化管理级、优化管理级。每个级别表示这个阶段企业的能力和水平。企业根据这个等级对自身进行评估，不断改进和完善。</p>
+
+<p>CMMI还包括几个模型，分别是 CMMI-DEV、CMMI-SVC、CMMI-ACQ、P-CMM\DMM，企业根据自身的能力和水平选择合适的模型并加以改进，提升企业的经营水平。</p>
+
+<hr />
+
+<h2 id="解释-psp-各项指标及技能要求">解释 PSP 各项指标及技能要求：</h2>
+
+<p>阅读《现代软件工程》的 PSP: Personal Software Process 章节。 <a href="http://www.cnblogs.com/xinz/archive/2011/11/27/2265425.html">http://www.cnblogs.com/xinz/archive/2011/11/27/2265425.html</a></p>
+
+<p>按表格 PSP 2.1， 了解一个软件工程师在接到一个任务之后要做什么，需要哪些技能，解释你打算如何统计每项数据？ （期末考核，每人按开发阶段提交这个表）</p>
+
+<p>一般来讲，各项数据的用时，可以采用记录开始时间和结束时间来获得。</p>
+
+<p>每当开始一个阶段任务的时候，记录开始时间，结束时记录结束时间，最后用于分析项目的时间占比。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">PSP2.1</th>
+      <th>ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">估计任务需要的时间</td>
+      <td>分析任务所需功能，结合以往开发经验，检索资料，了解整个任务的设计和开发难度，确定完成时间</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>开发</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">需求分析（包括学习新技术）</td>
+      <td>结合相类似的项目分析需求，查看是否需要调研，分析、复查，确认需求</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">生成设计文档</td>
+      <td>编写清晰的设计文档，复查审阅</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">设计复审（和同事审核设计文档）</td>
+      <td>明确沟通事项，复审过程清晰标明自己的观点</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">代码规范（为目前的开发制定合适的规范）</td>
+      <td>选择项目开发合适的代码规范</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">具体设计</td>
+      <td>从现有的先进的设计模型中挑选合适的设计方法，形成完整方案</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">具体编码</td>
+      <td>按照代码规范，设计方法编码</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">代码复审</td>
+      <td>按照代码规范、项目功能、设计思路审查</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">测试（自我测试，修改代码，提交修改）</td>
+      <td>测试过程撰写测试报告，报告写下开始时间和结束时间</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>报告</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">测试报告</td>
+      <td>在测试阶段完成</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">计算工作量</td>
+      <td>代码行数、项目用时、项目需求等评判</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">事后总结，并提出过程改进计划</td>
+      <td>分析最终展示成果和预期的差别，各个阶段时间占比，完成项目过程的报告等。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+                <hr>
+
+                
+
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2018/04/15/homework2/" data-toggle="tooltip" data-placement="top" title="系分 Homework 2">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+        				
+                            
+                				<a href="/tags/#系分作业" title="系分作业" rel="4">
+                                    系分作业
+                                </a>
+                            
+        				
+                            
+                				<a href="/tags/#前端" title="前端" rel="4">
+                                    前端
+                                </a>
+                            
+        				
+        			</div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "bravos";
+    var disqus_identifier = "/2018/03/22/homework1";
+    var disqus_url = "http://localhost:8080/2018/03/22/homework1/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+
+                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/grup">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/LiceOnce">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/yinghongZhang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Live Once 2018
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'yinghongzhang.github.io';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
