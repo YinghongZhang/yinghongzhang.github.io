@@ -19,4 +19,4 @@ tags:
 
 **系统顺序图：**
 
-![1](img/in-post/system-analysis/lesson9/15331407.png)
+![1](/img/in-post/system-analysis/lesson9/15331407.png)
